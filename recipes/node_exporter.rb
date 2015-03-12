@@ -10,6 +10,6 @@ scpr_consul_web_service "prometheus-node-exporter" do
   action      :create
   port        node.prometheus_client.node_exporter.port
   match       "process_goroutines"
-  name_suffix nil
+  name_suffix false
   tags        nil
 end
