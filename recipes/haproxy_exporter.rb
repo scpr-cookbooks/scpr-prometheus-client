@@ -4,7 +4,7 @@ include_recipe "scpr-consul"
 
 prometheus_client_haproxy node.name do
   action      :install
-  scrape_uri  "http://#{node.ipaddress}:1944;csv"
+  scrape_uri  "http://#{node.ipaddress}:1944/;csv"
 end
 
 scpr_consul_web_service "prometheus-haproxy-exporter" do
