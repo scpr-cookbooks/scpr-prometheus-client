@@ -3,7 +3,8 @@ include_recipe "scpr-consul"
 # -- Set up the node-exporter -- #
 
 prometheus_client_node node.name do
-  action :install
+  action    :install
+  file_path node.prometheus_client.node_exporter.file_path
 end
 
 scpr_consul_web_service "prometheus-node-exporter" do
