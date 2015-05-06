@@ -4,7 +4,7 @@ maintainer_email 'erichardson@scpr.org'
 license          'BSD'
 description      'Installs/Configures scpr-prometheus-client'
 long_description 'Installs/Configures scpr-prometheus-client'
-version          '0.1.7'
+version          '0.1.8'
 
-depends "prometheus-client"
+depends "prometheus-client", "~> 0.2.0"
 depends "scpr-consul", "~> 0.1.24"
